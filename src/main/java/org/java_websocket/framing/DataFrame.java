@@ -34,15 +34,16 @@ public abstract class DataFrame extends FramedataImpl1 {
 
 	/**
 	 * Class to represent a data frame
-	 * @param opcode the opcode to use
+	 * 
+	 * @param opcode
+	 *            the opcode to use
 	 */
 	public DataFrame(Opcode opcode) {
 		super(opcode);
 	}
 
 	@Override
-	public void isValid() throws InvalidDataException
-	{
-      //Nothing specific to check
+	public void isValid() throws InvalidDataException {
+		// Nothing specific to check
 	}
 }

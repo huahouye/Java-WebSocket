@@ -30,7 +30,8 @@ import org.java_websocket.exceptions.InvalidFrameException;
 import org.java_websocket.framing.Framedata;
 
 /**
- * Class which represents the normal websocket implementation specified by rfc6455.
+ * Class which represents the normal websocket implementation specified by
+ * rfc6455.
  *
  * This is a fallback and will always be available for a Draft_6455
  *
@@ -38,29 +39,30 @@ import org.java_websocket.framing.Framedata;
 public class DefaultExtension implements IExtension {
 
 	@Override
-	public void decodeFrame( Framedata inputFrame ) throws InvalidDataException {
-		//Nothing to do here
+	public void decodeFrame(Framedata inputFrame) throws InvalidDataException {
+		// Nothing to do here
 	}
 
 	@Override
-	public void encodeFrame( Framedata inputFrame ) {
-		//Nothing to do here
+	public void encodeFrame(Framedata inputFrame) {
+		// Nothing to do here
 	}
 
 	@Override
-	public boolean acceptProvidedExtensionAsServer( String inputExtension ) {
+	public boolean acceptProvidedExtensionAsServer(String inputExtension) {
 		return true;
 	}
 
 	@Override
-	public boolean acceptProvidedExtensionAsClient( String inputExtension ) {
+	public boolean acceptProvidedExtensionAsClient(String inputExtension) {
 		return true;
 	}
 
 	@Override
-	public void isFrameValid( Framedata inputFrame ) throws InvalidDataException {
-		if( inputFrame.isRSV1() || inputFrame.isRSV2() || inputFrame.isRSV3() ) {
-			throw new InvalidFrameException( "bad rsv RSV1: " + inputFrame.isRSV1() + " RSV2: " + inputFrame.isRSV2() + " RSV3: " + inputFrame.isRSV3() );
+	public void isFrameValid(Framedata inputFrame) throws InvalidDataException {
+		if (inputFrame.isRSV1() || inputFrame.isRSV2() || inputFrame.isRSV3()) {
+			throw new InvalidFrameException("bad rsv RSV1: " + inputFrame.isRSV1() + " RSV2: " + inputFrame.isRSV2()
+					+ " RSV3: " + inputFrame.isRSV3());
 		}
 	}
 
@@ -80,7 +82,7 @@ public class DefaultExtension implements IExtension {
 	}
 
 	public void reset() {
-		//Nothing to do here. No internal stats.
+		// Nothing to do here. No internal stats.
 	}
 
 	@Override
